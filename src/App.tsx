@@ -1,6 +1,5 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import { LoginPage, SignUpPage } from "./pages";
-import { CourseComponent } from "./components/course";
+import { HomePage, LoginPage, SignUpPage } from "./pages";
 
 function App() {
   return (
@@ -8,7 +7,7 @@ function App() {
       <Routes>
         <Route path="/login" Component={LoginPage} />
         <Route path="/sign-up" Component={SignUpPage} />
-        <Route path="/" Component={CourseComponent} />
+        <Route path="/" Component={HomePage} />
       </Routes>
     </BrowserRouter>
   );
