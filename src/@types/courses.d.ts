@@ -34,5 +34,6 @@ declare namespace Courses {
     image: string;
     lastUpdated: string;
     modules: Modules[];
+    youtubeLink: string;
   }
 }
