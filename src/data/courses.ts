@@ -16,7 +16,7 @@ export const courses = [
     subcategory: "Web Development",
     tags: ["HTML", "CSS", "JavaScript", "Responsive Design"],
     image: "/courses/web_dev.png",
-    youtubeLink: "https://www.youtube.com/watch?v=UB1O30fR-EE",
+    youtubeLink: "https://www.youtube.com/embed/UB1O30fR-EE",
     lastUpdated: "2023-11-15",
     modules: [
       {
@@ -58,7 +58,7 @@ export const courses = [
     subcategory: "Data Analysis",
     tags: ["Python", "Pandas", "NumPy", "Data Visualization"],
     image: "/courses/data-science.png",
-    youtubeLink: " ",
+    youtubeLink: "https://www.youtube.com/embed/CiDNNj30",
     lastUpdated: "2023-12-05",
     modules: [
       {
@@ -100,7 +100,7 @@ export const courses = [
     subcategory: "Management",
     tags: ["Leadership", "Strategy", "Organizational Behavior"],
     image: "/courses/buisness.png",
-    youtubeLink: "https://www.youtube.com/watch?v=4KdFcfDZg1Y",
+    youtubeLink: "https://www.youtube.com/embed/4KdFcfDZg1Y",
     lastUpdated: "2024-01-10",
     modules: [
       {
@@ -142,7 +142,7 @@ export const courses = [
     subcategory: "UI/UX Design",
     tags: ["Figma", "User Research", "Prototyping", "Design Systems"],
     image: "/courses/uiux.png",
-    youtubeLink: "https://www.youtube.com/watch?v=0xVqZLJzQwA",
+    youtubeLink: "https://www.youtube.com/embed/0xVqZLJzQwA",
     lastUpdated: "2023-10-20",
     modules: [
       {
@@ -189,7 +189,7 @@ export const courses = [
     subcategory: "Digital Marketing",
     tags: ["SEO", "Social Media", "Content Marketing", "Analytics"],
     image: "/courses/digital-marketing.png",
-    youtubeLink: "https://www.youtube.com/watch?v=3LKmjdlvCtE",
+    youtubeLink: "https://www.youtube.com/embed/3LKmjdlvCtE",
     lastUpdated: "2024-02-15",
     modules: [
       {
@@ -241,7 +241,7 @@ export const courses = [
       "Functional Programming",
     ],
     image: "/courses/js.jpg",
-    youtubeLink: "https://www.youtube.com/watch?v=PkZNo7MFNFg",
+    youtubeLink: "https://www.youtube.com/embed/PkZNo7MFNFg",
     lastUpdated: "2023-11-20",
     modules: [
       {
@@ -283,7 +283,7 @@ export const courses = [
     subcategory: "Machine Learning",
     tags: ["Python", "TensorFlow", "Scikit-learn", "Deep Learning"],
     image: "/courses/machine.png",
-    youtubeLink: "https://www.youtube.com/watch?v=aircAruvnKk",
+    youtubeLink: "https://www.youtube.com/embed/aircAruvnKk",
     lastUpdated: "2023-12-10",
     modules: [
       {
@@ -325,7 +325,7 @@ export const courses = [
     subcategory: "Web Development",
     tags: ["React", "JavaScript", "Frontend", "Components"],
     image: "/courses/react.jpg",
-    youtubeLink: "https://www.youtube.com/watch?v=DLX62G4lc44",
+    youtubeLink: "https://www.youtube.com/embed/DLX62G4lc44",
     lastUpdated: "2024-01-15",
     modules: [
       {
@@ -367,7 +367,7 @@ export const courses = [
     subcategory: "Blockchain",
     tags: ["Blockchain", "Smart Contracts", "Ethereum", "dApps"],
     image: "/courses/blockchain.png",
-    youtubeLink: "https://www.youtube.com/watch?v=SSo_EIwHSd4",
+    youtubeLink: "https://www.youtube.com/embed/SSo_EIwHSd4",
     lastUpdated: "2023-12-20",
     modules: [
       {
@@ -409,7 +409,7 @@ export const courses = [
     subcategory: "Cybersecurity",
     tags: ["Cybersecurity", "Encryption", "Threat Detection", "Secure Coding"],
     image: "/courses/cybersecurity.png",
-    youtubeLink: "https://www.youtube.com/watch?v=11iNi9XQtPc",
+    youtubeLink: "https://www.youtube.com/embed/11iNi9XQtPc",
     lastUpdated: "2024-01-25",
     modules: [
       {
@@ -451,7 +451,7 @@ export const courses = [
     subcategory: "Graphic Design",
     tags: ["Typography", "Color Theory", "Layout", "Adobe Creative Suite"],
     image: "/courses/graphic.png",
-    youtubeLink: "https://www.youtube.com/watch?v=6maV-qJn9Ww",
+    youtubeLink: "https://www.youtube.com/embed/6maV-qJn9Ww",
     lastUpdated: "2024-02-05",
     modules: [
       {
@@ -493,7 +493,7 @@ export const courses = [
     subcategory: "Project Management",
     tags: ["Project Planning", "Agile", "Scrum", "Risk Management"],
     image: "/courses/project-management.png",
-    youtubeLink: "https://www.youtube.com/watch?v=6L-SX1yUwWw",
+    youtubeLink: "https://www.youtube.com/embed/6L-SX1yUwWw",
     lastUpdated: "2024-02-10",
     modules: [
       {
@@ -535,7 +535,7 @@ export const courses = [
     subcategory: "Python",
     tags: ["Python", "Data Structures", "Algorithms", "Syntax"],
     image: "/courses/python.png",
-    youtubeLink: "https://www.youtube.com/watch?v=_uQrJ0TkZlc",
+    youtubeLink: "https://www.youtube.com/embed/_uQrJ0TkZlc",
     lastUpdated: "2024-02-20",
     modules: [
       {
@@ -577,7 +577,7 @@ export const courses = [
     subcategory: "Cloud Computing",
     tags: ["AWS", "Cloud", "Infrastructure", "Deployment"],
     image: "/courses/cloud.png",
-    youtubeLink: "https://www.youtube.com/watch?v=zlBbX0sDrLU",
+    youtubeLink: "https://www.youtube.com/embed/zlBbX0sDrLU",
     lastUpdated: "2024-03-05",
     modules: [
       {
@@ -619,7 +619,7 @@ export const courses = [
     subcategory: "Mobile Development",
     tags: ["Flutter", "Dart", "Mobile Apps", "Cross-Platform"],
     image: "/courses/appdev.png",
-    youtubeLink: "https://www.youtube.com/watch?v=x0uinJvhNxI",
+    youtubeLink: "https://www.youtube.com/embed/x0uinJvhNxI",
     lastUpdated: "2024-03-15",
     modules: [
       {
@@ -661,7 +661,7 @@ export const courses = [
     subcategory: "Personal Finance",
     tags: ["Budgeting", "Saving", "Investing", "Debt Management"],
     image: "/courses/finance.png",
-    youtubeLink: "https://www.youtube.com/watch?v=7jG7vhVXjlc",
+    youtubeLink: "https://www.youtube.com/embed/7jG7vhVXjlc",
     lastUpdated: "2024-03-20",
     modules: [
       {
@@ -703,7 +703,7 @@ export const courses = [
     subcategory: "Game Development",
     tags: ["Unity", "Game Mechanics", "Physics", "Scripting"],
     image: "/courses/gamedev.png",
-    youtubeLink: "https://www.youtube.com/watch?v=gB1F9G0JXOo",
+    youtubeLink: "https://www.youtube.com/embed/gB1F9G0JXOo",
     lastUpdated: "2024-03-25",
     modules: [
       {
@@ -745,7 +745,7 @@ export const courses = [
     subcategory: "Data Visualization",
     tags: ["Tableau", "Dashboards", "Data Analysis", "Visualization"],
     image: "/courses/data-visual.png",
-    youtubeLink: "https://www.youtube.com/watch?v=3mTnsaQrXZs",
+    youtubeLink: "https://www.youtube.com/embed/3mTnsaQrXZs",
     lastUpdated: "2024-04-05",
     modules: [
       {
@@ -787,7 +787,7 @@ export const courses = [
     subcategory: "Social Media",
     tags: ["Instagram", "Facebook", "LinkedIn", "Content Strategy"],
     image: "/courses/social-media.png",
-    youtubeLink: "https://www.youtube.com/watch?v=9oHefHHrgFY",
+    youtubeLink: "https://www.youtube.com/embed/9oHefHHrgFY",
     lastUpdated: "2024-04-10",
     modules: [
       {
@@ -829,7 +829,7 @@ export const courses = [
     subcategory: "Communication",
     tags: ["Public Speaking", "Storytelling", "Confidence", "Communication"],
     image: "/courses/public-talk.png",
-    youtubeLink: "https://www.youtube.com/watch?v=UF8uR6Z6KLc",
+    youtubeLink: "https://www.youtube.com/embed/UF8uR6Z6KLc",
     lastUpdated: "2024-04-15",
     modules: [
       {

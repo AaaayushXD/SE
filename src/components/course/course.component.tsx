@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { courses } from "@/data/courses";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -15,11 +15,14 @@ import {
 } from "lucide-react";
 import { useParams } from "react-router-dom";
 import { LayoutComponent } from "../layout";
+import { Modal } from "@/common";
 
 export const CourseDetailPage = () => {
   const [course, setCourse] = useState<Courses.CourseCard | null>(null);
   const [loading, setLoading] = useState(true);
   const params = useParams<{ id: string }>();
+  const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
+  const modalRef = useRef<HTMLDivElement | null>(null);
 
   console.log(params);
   useEffect(() => {
@@ -33,6 +36,21 @@ export const CourseDetailPage = () => {
     }
     setLoading(false);
   }, [params.id]);
+
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (
+        modalRef.current &&
+        !modalRef.current.contains(event.target as Node)
+      ) {
+        setIsModalOpen(false);
+      }
+    };
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [modalRef]);
 
   if (loading) {
     return (
@@ -113,7 +131,7 @@ export const CourseDetailPage = () => {
                   <div className="mb-6">
                     <div className="flex items-center gap-3 mb-2">
                       <img
-                        src="/placeholder.svg?height=50&width=50"
+                        src="https://github.com/shadcn.png"
                         alt={course.instructor}
                         className="rounded-full h-12 w-12 object-cover"
                       />
@@ -142,7 +160,8 @@ export const CourseDetailPage = () => {
                         <Button
                           size="icon"
                           variant="outline"
-                          className="rounded-full h-14 w-14 bg-white text-black hover:bg-white/90 hover:text-black"
+                          className="rounded-full h-14 w-14 bg-white text-black hover:bg-white/90 hover:text-black cursor-pointer"
+                          onClick={() => setIsModalOpen(true)}
                         >
                           <Play className="h-6 w-6 fill-current" />
                         </Button>
@@ -151,7 +170,7 @@ export const CourseDetailPage = () => {
                     <div className="p-6">
                       <div className="flex items-center justify-between mb-6">
                         <div className="text-3xl font-bold">
-                          ${course.price.toFixed(2)}
+                          Rs {course.price.toFixed(2)}
                         </div>
                       </div>
                       <Button className="w-full mb-4">Enroll Now</Button>
@@ -489,6 +508,31 @@ export const CourseDetailPage = () => {
           </div>
         </main>
       </div>
+      <Modal
+        visible={isModalOpen}
+        closeModal={() => setIsModalOpen(false)}
+        setVisible={setIsModalOpen}
+        style={{
+          width: "90%",
+          height: "90%",
+        }}
+        disableScroll
+        title={course.title ?? "Course"}
+      >
+        <div className="w-full h-full flex" ref={modalRef}>
+          <iframe
+            src={course.youtubeLink}
+            width={"100%"}
+            height={"100%"}
+            className="w-full h-full min-h-[80vh]"
+            style={{
+              objectFit: "cover",
+              objectPosition: "center",
+            }}
+            allowFullScreen
+          />
+        </div>
+      </Modal>
     </LayoutComponent>
   );
 };
