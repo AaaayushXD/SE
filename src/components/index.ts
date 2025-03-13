@@ -2,3 +2,8 @@ export * from "./login";
 export * from "./signup";
 export * from "./landing";
 export * from "./about";
+export * from "./course";
+export * from "./courses";
+export * from "./features";
+export * from "./search";
+export * from "./category";
