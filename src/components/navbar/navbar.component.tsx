@@ -1,6 +1,6 @@
-import { Search } from "lucide-react";
+// import { Search } from "lucide-react";
+// import { Input } from "../ui/input";
 import { Button, buttonVariants } from "../ui/button";
-import { Input } from "../ui/input";
 import { useNavigate } from "react-router-dom";
 
 export const NavbarComponent = () => {
@@ -11,10 +11,10 @@ export const NavbarComponent = () => {
         src="/aayushlogo.png"
         className="w-18 h-20 p-2 rounded-full object-center object-contain"
       />
-      <div className="grow relative md:flex hidden transition-all duration-500 ease-in-out">
+      {/* <div className="grow relative md:flex hidden transition-all duration-500 ease-in-out">
         <Input type="text" className="h-12" placeholder="Search Courses....." />
         <Search className="absolute right-3 top-3 text-gray-400 hover:text-blue-500 cursor-pointer" />
-      </div>
+      </div> */}
       <div className="flex gap-4">
         <Button
           className={buttonVariants({
