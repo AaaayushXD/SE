@@ -8,6 +8,7 @@ import {
   CardHeader,
 } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { useState } from "react";
 
 interface CourseCardProps {
   course: Courses.CourseCard;
@@ -15,6 +16,8 @@ interface CourseCardProps {
 }
 
 export const CourseCard = ({ course, featured }: CourseCardProps) => {
+  const [isImageLoaded, setIsImageLoaded] = useState<boolean>(false);
+
   return (
     <Card
       className={`h-full flex flex-col overflow-hidden transition-all duration-200 hover:shadow-md group ${
@@ -22,6 +25,16 @@ export const CourseCard = ({ course, featured }: CourseCardProps) => {
       }`}
     >
       <div className="relative aspect-video overflow-hidden">
+        {!isImageLoaded && (
+          <img
+            src={`/placeholder.svg?height=200&width=350&text=${encodeURIComponent(
+              course.title
+            )}`}
+            alt={`Placeholder for ${course.title}`}
+            className="object-cover w-full h-full"
+          />
+        )}
+
         <img
           src={
             course.image ||
@@ -31,6 +44,9 @@ export const CourseCard = ({ course, featured }: CourseCardProps) => {
           }
           alt={course.title}
           className="object-cover w-full h-full transition-transform duration-300"
+          loading="lazy"
+          onLoad={() => setIsImageLoaded(true)}
+          onError={() => setIsImageLoaded(false)}
         />
         <Badge variant="secondary" className="absolute top-2 right-2">
           {course.level}
