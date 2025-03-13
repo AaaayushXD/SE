@@ -1,6 +1,6 @@
 export const AboutUsSection = () => {
   return (
-    <div className="w-full bg-[#f9fafb] py-16">
+    <div className="w-full bg-[#f9fafb] py-16" id="about">
       <div className="container mx-auto text-center flex flex-col items-center gap-8 px-4">
         <span className="bg-[#02aaa4] text-white px-4 py-1 rounded-full text-sm font-semibold">
           About Us

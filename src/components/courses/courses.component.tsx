@@ -102,7 +102,7 @@ export const CoursesPage = ({ courses }: { courses: Courses.CourseCard[] }) => {
   };
 
   return (
-    <div className="container mx-auto px-4 py-12">
+    <div className="container mx-auto px-4 py-12" id="courses">
       <div className="flex flex-col md:flex-row gap-6 mb-8">
         <div className="md:w-1/4">
           <CategoryFilter

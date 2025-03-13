@@ -22,12 +22,18 @@ export const LandingComponent = () => {
             achieve your career goals.
           </p>
           <div className="flex justify-center lg:justify-start gap-4">
-            <button className="bg-[#02aaa4] text-white py-3 px-6 rounded-lg shadow-lg hover:bg-[#019d97] transition duration-300 flex justify-center items-center cursor-pointer">
+            <a
+              href="#courses"
+              className="bg-[#02aaa4] text-white py-3 px-6 rounded-lg shadow-lg hover:bg-[#019d97] transition duration-300 flex justify-center items-center cursor-pointer"
+            >
               Get Started <ChevronRight className="ml-2 w-5 h-5" />
-            </button>
-            <button className="px-6 py-3 rounded-lg border border-gray-300 hover:bg-gray-100 transition duration-300 cursor-pointer">
+            </a>
+            <a
+              href="#about"
+              className="px-6 py-3 rounded-lg border border-gray-300 hover:bg-gray-100 transition duration-300 cursor-pointer"
+            >
               Learn More
-            </button>
+            </a>
           </div>
         </div>
 

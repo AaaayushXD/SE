@@ -82,7 +82,7 @@ export const CourseGrid = ({ courses }: CourseGridProps) => {
               </>
             )}
           </div>
-          {sortedCourses.length > 5 && (
+          {sortedCourses.length > 6 && (
             <div
               className="mt-4 w-full flex justify-center items-center transition ease-in-out duration-200"
               onClick={() => setShowAll((prev) => !prev)}

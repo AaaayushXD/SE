@@ -75,11 +75,6 @@ export const CategoryFilter = ({
     onPriceChange(value);
   };
 
-  // Apply filters
-  const applyFilters = () => {
-    // Filters are applied automatically via state changes
-  };
-
   return (
     <div className="bg-card rounded-lg border p-4">
       <div className="flex items-center justify-between mb-4">
@@ -263,12 +258,6 @@ export const CategoryFilter = ({
           </AccordionContent>
         </AccordionItem>
       </Accordion>
-
-      <div className="mt-6">
-        <Button className="w-full" onClick={applyFilters}>
-          Apply Filters
-        </Button>
-      </div>
     </div>
   );
 };
