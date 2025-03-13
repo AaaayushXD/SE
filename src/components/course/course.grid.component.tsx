@@ -16,6 +16,7 @@ interface CourseGridProps {
 
 export const CourseGrid = ({ courses }: CourseGridProps) => {
   const [sortBy, setSortBy] = useState("popular");
+  const [showAll, setShowAll] = useState<boolean>(false);
 
   const sortedCourses = [...courses].sort((a, b) => {
     switch (sortBy) {
@@ -65,11 +66,33 @@ export const CourseGrid = ({ courses }: CourseGridProps) => {
           </p>
         </div>
       ) : (
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {sortedCourses.map((course) => (
-            <CourseCard key={course.id} course={course} />
-          ))}
-        </div>
+        <>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {showAll ? (
+              <>
+                {sortedCourses.map((course) => (
+                  <CourseCard key={course.id} course={course} />
+                ))}
+              </>
+            ) : (
+              <>
+                {sortedCourses.slice(0, 6).map((course) => (
+                  <CourseCard key={course.id} course={course} />
+                ))}
+              </>
+            )}
+          </div>
+          {sortedCourses.length > 5 && (
+            <div
+              className="mt-4 w-full flex justify-center items-center transition ease-in-out duration-200"
+              onClick={() => setShowAll((prev) => !prev)}
+            >
+              <button className="p-3 bg-[#BA68C8] text-white rounded hover:bg-[#6e3c77] cursor-pointer ">
+                {showAll ? "View Less" : "Show More"}
+              </button>
+            </div>
+          )}
+        </>
       )}
     </div>
   );

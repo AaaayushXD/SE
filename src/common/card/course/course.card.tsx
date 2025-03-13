@@ -17,7 +17,7 @@ interface CourseCardProps {
 export const CourseCard = ({ course, featured }: CourseCardProps) => {
   return (
     <Card
-      className={`h-full flex flex-col overflow-hidden transition-all duration-200 hover:shadow-md ${
+      className={`h-full flex flex-col overflow-hidden transition-all duration-200 hover:shadow-md group ${
         featured ? "border-primary/20" : ""
       }`}
     >
@@ -30,7 +30,7 @@ export const CourseCard = ({ course, featured }: CourseCardProps) => {
             )}`
           }
           alt={course.title}
-          className="object-cover w-full h-full transition-transform duration-300 hover:scale-105"
+          className="object-cover w-full h-full transition-transform duration-300"
         />
         <Badge variant="secondary" className="absolute top-2 right-2">
           {course.level}
@@ -80,7 +80,7 @@ export const CourseCard = ({ course, featured }: CourseCardProps) => {
       </CardContent>
       <CardFooter className="p-4 pt-0 flex items-center justify-between">
         <div className="font-bold text-lg">Rs {course.price.toFixed(2)}</div>
-        <Button asChild size="sm" className="bg-[#39b2ad]">
+        <Button asChild size="sm" className="bg-[#39b2ad] hover:bg-[#366d6b]">
           <a href={`/course/${course.id}`}>View Course</a>
         </Button>
       </CardFooter>
